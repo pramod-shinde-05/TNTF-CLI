@@ -1,0 +1,23 @@
+{
+    "metadata": {
+        "version": "2.0",
+        "description": "Temporal state feature schema. Packet-level features and IP-based behavioral features are omitted/limited due to CIC-IDS2018 missing Src IP/Dst IP in 90% of the raw CSV files."
+    },
+    "raw_flow_features_to_keep": [
+        "Protocol",
+        "Dst Port",
+        "Flow Duration",
+        "Tot Fwd Pkts",
+        "Tot Bwd Pkts",
+        "TotLen Fwd Pkts",
+        "TotLen Bwd Pkts",
+        "Pkt Len Mean",
+        "Pkt Len Std",
+        "Pkt Len Max",
+        "Flow Pkts/s",
+        "Flow Byts/s",
+        "Flow IAT Mean",
+        "SYN Flag Cnt",
+        "RST Flag Cnt"
+    ]
+}

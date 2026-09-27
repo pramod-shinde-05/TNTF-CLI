@@ -1,0 +1,20 @@
+{
+  "schema_version": "2.0",
+  "features": [
+    {"name": "active_flows", "index": 0},
+    {"name": "forward_packets", "index": 1},
+    {"name": "backward_packets", "index": 2},
+    {"name": "forward_bytes", "index": 3},
+    {"name": "backward_bytes", "index": 4},
+    {"name": "packet_size_mean", "index": 5},
+    {"name": "packets_per_second", "index": 6},
+    {"name": "bytes_per_second", "index": 7},
+    {"name": "tcp_ratio", "index": 8},
+    {"name": "udp_ratio", "index": 9},
+    {"name": "iat_mean", "index": 10},
+    {"name": "syn_count", "index": 11},
+    {"name": "rst_count", "index": 12},
+    {"name": "destination_port_entropy", "index": 13},
+    {"name": "flow_duration_mean", "index": 14}
+  ]
+}

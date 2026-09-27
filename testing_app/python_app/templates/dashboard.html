@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Your accounts | Harborline Bank{% endblock %}
+{% block content %}
+<section class="account-heading"><div><p class="eyebrow">Personal banking / Overview</p><h1>Good day, {{ display_name }}.</h1><p>Your accounts at a glance.</p></div><a class="button button-dark" href="{{ url_for('transfer') }}">Move money <span aria-hidden="true">&#8594;</span></a></section>
+<section class="account-overview" aria-label="Account overview">
+	<article class="balance-feature"><div class="balance-top"><span>Everyday checking</span><span class="account-status"><i></i> Open</span></div><p class="account-number">Account ending in 2048</p><p class="balance-label">Available balance</p><p class="balance-amount"><span>$</span>{{ "{:,.2f}".format(account_balance) }}</p><div class="balance-bottom"><span>Harborline Checking</span><span>•••• 2048</span></div></article>
+	<div class="account-aside"><article class="mini-account"><span class="mini-icon" aria-hidden="true">S</span><div><p>Rainy Day Savings</p><small>•••• 8812</small></div><strong>$8,420.00</strong></article><div class="account-note"><span class="note-mark" aria-hidden="true">i</span><p><strong>Your demo account</strong><br>Balances and activity shown here are sample data, not connected to a financial institution.</p></div></div>
+</section>
+<section class="activity-section"><div class="section-title-row"><div><p class="eyebrow">Recent activity</p><h2>Transactions</h2></div><a class="text-link" href="{{ url_for('search') }}">Search activity <span aria-hidden="true">&#8594;</span></a></div>
+	<div class="table-wrap"><table class="transaction-table"><thead><tr><th scope="col">Description</th><th scope="col">Date</th><th scope="col">Status</th><th scope="col" class="align-right">Amount</th></tr></thead><tbody>{% for transaction in transactions %}<tr><td><span class="transaction-icon" aria-hidden="true">{% if transaction.amount > 0 %}&#8593;{% else %}&#8599;{% endif %}</span><span class="transaction-description">{{ transaction.desc }}<small>{{ transaction.id }}</small></span></td><td>{{ transaction.date }}</td><td><span class="status-pill {{ 'status-pending' if transaction.status == 'Pending' else 'status-complete' }}">{{ transaction.status }}</span></td><td class="align-right amount {{ 'amount-credit' if transaction.amount > 0 else '' }}">{{ '+' if transaction.amount > 0 else '-' }}${{ "%.2f"|format(transaction.amount|abs) }}</td></tr>{% endfor %}</tbody></table></div>
+</section>
+{% endblock %}

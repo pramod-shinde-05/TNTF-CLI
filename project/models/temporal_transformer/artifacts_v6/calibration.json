@@ -1,0 +1,6 @@
+{
+    "operating_threshold": 0.6623736619949341,
+    "target_fpr": 0.05,
+    "actual_fpr": 0.04989816700610998,
+    "tpr_at_threshold": 0.9774278215223097
+}

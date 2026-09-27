@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Sign in | Harborline Bank{% endblock %}
+{% block content %}
+<section class="login-layout">
+	<div class="login-story"><p class="eyebrow">Your money, in view</p><h1>Welcome to a<br>calmer kind of banking.</h1><p>Pick up right where you left off with a clear view of your demo account.</p><span class="login-story-note">Harborline Bank / Online access</span></div>
+	<div class="login-panel">
+		<p class="eyebrow">Online banking</p><h2>Sign in</h2><p class="form-intro">Use any email address and a password of at least four characters to enter the demo.</p>
+		{% if error %}<p class="form-error" role="alert">{{ error }}</p>{% endif %}
+		<form method="post" class="bank-form">
+			<label for="email">Email address</label><input id="email" type="email" name="email" autocomplete="username" placeholder="you@example.com" required>
+			<label for="password">Password</label><input id="password" type="password" name="password" autocomplete="current-password" placeholder="Enter any 4+ characters" required minlength="4">
+			<button class="button button-dark" type="submit">Continue securely <span aria-hidden="true">&#8594;</span></button>
+		</form>
+		<p class="security-note"><span aria-hidden="true">&#9679;</span> Demo sign-in only. Do not enter a real banking password.</p>
+	</div>
+</section>
+{% endblock %}

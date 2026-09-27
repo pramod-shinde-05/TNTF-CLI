@@ -1,0 +1,1 @@
+{"features": ["Flow Duration", "Tot Fwd Pkts", "Tot Bwd Pkts", "Flow Byts/s", "Flow Pkts/s", "Flow IAT Mean", "Flow IAT Max", "SYN Flag Cnt", "ACK Flag Cnt", "FIN Flag Cnt", "RST Flag Cnt"]}

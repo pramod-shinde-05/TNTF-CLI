@@ -1,0 +1,28 @@
+architecture:
+  shared_backbone: true
+  specialist_heads: true
+
+model:
+  input_dim: 15 # Updated for 15-feature lightweight model
+  embedding_dim: 128
+  transformer_layers: 4
+  attention_heads: 4
+  feed_forward_dim: 256
+  dropout: 0.1
+  sequence_length: 60
+
+training:
+  batch_size: 256
+  learning_rate: 0.001
+  epochs: 50
+  early_stopping_patience: 5
+  mixed_precision: true
+  gradient_clip_val: 1.0
+
+prediction_horizons:
+  - "now"
+  - "future_5s"
+  - "future_10s"
+  - "future_15s"
+  - "future_30s"
+  - "future_60s"

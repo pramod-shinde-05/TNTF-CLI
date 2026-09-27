@@ -1,0 +1,83 @@
+{
+    "Benign": {
+        "progression_stage": "Normal",
+        "mitre_tactic_id": "None",
+        "mitre_tactic_name": "None",
+        "mitre_technique_id": "None",
+        "mitre_technique_name": "None",
+        "confidence_level": 1.0,
+        "evidence_required": "Normal baseline traffic behavior"
+    },
+    "PortScan": {
+        "progression_stage": "Reconnaissance",
+        "mitre_tactic_id": "TA0043",
+        "mitre_tactic_name": "Reconnaissance",
+        "mitre_technique_id": "T1595",
+        "mitre_technique_name": "Active Scanning",
+        "confidence_level": 0.9,
+        "evidence_required": "High number of unique destination ports from single source"
+    },
+    "Brute Force": {
+        "progression_stage": "Initial Access",
+        "mitre_tactic_id": "TA0006",
+        "mitre_tactic_name": "Credential Access",
+        "mitre_technique_id": "T1110",
+        "mitre_technique_name": "Brute Force",
+        "confidence_level": 0.8,
+        "evidence_required": "High volume of repetitive authentication attempts"
+    },
+    "Web Attack": {
+        "progression_stage": "Initial Access",
+        "mitre_tactic_id": "TA0001",
+        "mitre_tactic_name": "Initial Access",
+        "mitre_technique_id": "Unmapped",
+        "mitre_technique_name": "Unmapped (Requires Payload Inspection)",
+        "confidence_level": 0.5,
+        "evidence_required": "Malicious payload indicators in HTTP traffic"
+    },
+    "Infiltration": {
+        "progression_stage": "Lateral Movement",
+        "mitre_tactic_id": "TA0008",
+        "mitre_tactic_name": "Lateral Movement",
+        "mitre_technique_id": "Unmapped",
+        "mitre_technique_name": "Unmapped (Generic Infiltration)",
+        "confidence_level": 0.5,
+        "evidence_required": "Internal pivoting or exploit delivery over SMB/RDP"
+    },
+    "Bot": {
+        "progression_stage": "Command & Control",
+        "mitre_tactic_id": "TA0011",
+        "mitre_tactic_name": "Command and Control",
+        "mitre_technique_id": "T1071",
+        "mitre_technique_name": "Application Layer Protocol",
+        "confidence_level": 0.7,
+        "evidence_required": "Periodic beacons to known or suspicious external IPs"
+    },
+    "DoS": {
+        "progression_stage": "Impact",
+        "mitre_tactic_id": "TA0040",
+        "mitre_tactic_name": "Impact",
+        "mitre_technique_id": "T1498",
+        "mitre_technique_name": "Network Denial of Service",
+        "confidence_level": 0.9,
+        "evidence_required": "High packet rate to single destination causing resource exhaustion"
+    },
+    "DDoS": {
+        "progression_stage": "Impact",
+        "mitre_tactic_id": "TA0040",
+        "mitre_tactic_name": "Impact",
+        "mitre_technique_id": "T1498",
+        "mitre_technique_name": "Network Denial of Service",
+        "confidence_level": 0.9,
+        "evidence_required": "High packet rate from multiple distinct sources to single destination"
+    },
+    "Unknown": {
+        "progression_stage": "Unknown",
+        "mitre_tactic_id": "Unknown",
+        "mitre_tactic_name": "Unknown",
+        "mitre_technique_id": "Unknown",
+        "mitre_technique_name": "Unknown",
+        "confidence_level": 0.0,
+        "evidence_required": "Cannot map unclassified traffic"
+    }
+}

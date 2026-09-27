@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Move money | Harborline Bank{% endblock %}
+{% block content %}
+<section class="simple-page transfer-page"><p class="eyebrow">Personal banking / Transfers</p><h1>Move money.</h1><p>Review a sample transfer. This demo does not send funds.</p>
+  {% if error %}<p class="form-error" role="alert">{{ error }}</p>{% endif %}
+  {% if confirmation %}<p class="form-success" role="status">{{ confirmation }}</p>{% endif %}
+  <form method="post" class="bank-form transfer-form"><label for="recipient">Recipient name</label><input id="recipient" name="recipient" autocomplete="off" placeholder="e.g. Jordan Lee" required><label for="amount">Amount</label><div class="money-input"><span>$</span><input id="amount" name="amount" type="number" min="0.01" step="0.01" placeholder="0.00" required></div><label for="memo">What is it for? <span class="optional">Optional</span></label><input id="memo" name="memo" placeholder="Add a note"><button class="button button-dark" type="submit">Review demo transfer <span aria-hidden="true">&#8594;</span></button></form>
+  <aside class="transfer-disclaimer"><strong>Demo only</strong><span>Transfers are not processed and no real account or payment information is used.</span></aside>
+</section>
+{% endblock %}

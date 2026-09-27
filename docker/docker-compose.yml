@@ -1,0 +1,48 @@
+version: '3.8'
+
+networks:
+  sih_lab_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.0.0.0/24
+
+services:
+  testing-app:
+    build:
+      context: ../testing_app
+      dockerfile: Dockerfile
+    container_name: testing-app
+    networks:
+      sih_lab_net:
+        ipv4_address: 10.0.0.10
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+
+  forecast:
+    build:
+      context: ../project
+      dockerfile: Dockerfile
+    container_name: forecast
+    # We use network_mode: "service:testing-app" so that the IDS container shares the same 
+    # network stack (and same eth0 interface) as the testing-app. This allows it to see
+    # all incoming and outgoing traffic of the target natively, just like a sidecar IDS.
+    network_mode: "service:testing-app"
+    cap_add:
+      - NET_RAW
+      - NET_ADMIN
+    # Runs infinitely, attach interactively via: docker exec -it forecast bash
+    restart: unless-stopped
+
+
+  attacker:
+    build:
+      context: ./attacker
+      dockerfile: Dockerfile
+    container_name: attacker
+    networks:
+      - sih_lab_net
+    volumes:
+      - ./scripts:/scripts:ro
+    restart: unless-stopped

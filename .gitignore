@@ -1,0 +1,76 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Virtual Environments
+venv/
+.venv/
+env/
+.env/
+
+# ---------------------------------------------------------
+# Raw and Processed Datasets (CRITICAL: Do not push large data to GitHub)
+# ---------------------------------------------------------
+dataset/
+dummy_dataset/
+dataset_v2/cleaned/
+dataset_v2/state_windows/
+dataset_v2/sequences/tensors/
+dataset_v2/sequences/labels/
+dataset_v2/splits/
+dataset_v2/master_dataset/
+dataset_v2/statistics/
+
+# Exclude older/alternative dataset folders
+dataset_v3_temporal/
+dataset_v3_clean/
+dataset_new/
+balanced_dataset/
+
+# Network Capture Data
+project/network_traffic_collector/data/
+*.pcap
+*.pcapng
+
+# General Large Data Extensions
+*.pkl
+*.npy
+*.pt
+*.pth
+*.h5
+*.hdf5
+*.joblib
+
+# ---------------------------------------------------------
+# ML Model Checkpoints & Large Artifacts
+# ---------------------------------------------------------
+project/models/temporal_transformer/artifacts_v6/*.pt
+project/models/temporal_transformer/artifacts_v6/*.pkl
+project/models/temporal_transformer/checkpoints/
+project/models/baselines/artifacts/*.joblib
+
+# ---------------------------------------------------------
+# Logs and Temporary Output
+# ---------------------------------------------------------
+*.log
+*.out
+project/network_traffic_collector/collector_error.log
+project/network_traffic_collector/sih_forecast.log
+project_content*.txt
+
+# ---------------------------------------------------------
+# OS Files
+# ---------------------------------------------------------
+.DS_Store
+Thumbs.db
+
+# ---------------------------------------------------------
+# IDE Settings
+# ---------------------------------------------------------
+.vscode/
+.idea/
+
+pack_project.py

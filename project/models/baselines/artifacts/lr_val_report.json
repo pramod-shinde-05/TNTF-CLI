@@ -1,0 +1,51 @@
+{
+    "Benign": {
+        "precision": 0.8853379817935308,
+        "recall": 0.597360167276529,
+        "f1-score": 0.7133827545844713,
+        "support": 15304.0
+    },
+    "Brute Force": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+    },
+    "DDoS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+    },
+    "DoS": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+    },
+    "Infiltration": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1596.0
+    },
+    "Web Attack": {
+        "precision": 0.04814954682779456,
+        "recall": 0.8557046979865772,
+        "f1-score": 0.09116910976045764,
+        "support": 298.0
+    },
+    "accuracy": 0.5464007442725899,
+    "macro avg": {
+        "precision": 0.15558125477022092,
+        "recall": 0.24217747754385102,
+        "f1-score": 0.1340919773908215,
+        "support": 17198.0
+    },
+    "weighted avg": {
+        "precision": 0.7886708360462192,
+        "recall": 0.5464007442725899,
+        "f1-score": 0.6363983062489456,
+        "support": 17198.0
+    }
+}

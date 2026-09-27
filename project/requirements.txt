@@ -1,0 +1,16 @@
+pandas==2.2.3
+numpy==1.26.4
+scikit-learn==1.6.1
+matplotlib
+seaborn
+joblib
+scapy
+textual
+flask
+requests
+torch
+pyyaml
+tqdm
+scipy
+polars
+textual-plotext

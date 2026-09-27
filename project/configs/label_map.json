@@ -1,0 +1,9 @@
+{
+    "Benign": 0,
+    "DDoS": 1,
+    "DoS": 2,
+    "Brute Force": 3,
+    "Bot": 4,
+    "Infiltration": 5,
+    "Web Attack": 6
+}
