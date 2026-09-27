@@ -7,7 +7,7 @@
 
 ---
 
-## 📑 Contents
+## Contents
 - [System Architecture](#system-architecture)
 - [Key Features](#key-features)
 - [Installation (Local)](#installation-local)
@@ -21,7 +21,7 @@
 
 ---
 
-## 🏗 System Architecture
+## System Architecture
 
 ![System Architecture](<media/TNTF-CLI System Architecture.png>)
 *End-to-end architecture from dataset ingestion to real-time forecasting.*
@@ -35,7 +35,7 @@ The v6 architecture converts raw traffic flows into continuous **1-second states
 
 ---
 
-## ✨ Key Features
+## Key Features
 - **Temporal Transformer**: Sequence-to-sequence multi-horizon threat forecasting.
 - **Lightweight State Representation**: 15 highly optimized network flow features per second.
 - **Live Terminal UI**: High-performance Textual dashboard displaying traffic, active flows, and predictions.
@@ -44,13 +44,13 @@ The v6 architecture converts raw traffic flows into continuous **1-second states
 
 ---
 
-## 💻 Installation (Local)
+## Installation (Local)
 
 **Requirements**: Python 3.10+, `pip`, and `libpcap` (or Npcap on Windows).
 
 **Linux / macOS**
 ```bash
-git clone <repository-url>
+git clone https://github.com/pramod-shinde-05/TNTF-CLI.git
 cd SIH2026
 python3 -m venv venv
 source venv/bin/activate
@@ -59,7 +59,7 @@ pip install -r project/requirements.txt
 
 **Windows**
 ```cmd
-git clone <repository-url>
+git clone https://github.com/pramod-shinde-05/TNTF-CLI.git
 cd SIH2026
 python -m venv venv
 .\venv\Scripts\activate
@@ -68,7 +68,7 @@ pip install -r project\requirements.txt
 
 ---
 
-## 🔬 Docker Network Testing Lab
+## Docker Network Testing Lab
 
 ![Docker Network Lab](<media/Docker Network Testing Lab.png>)
 *Topology of the Docker-isolated testing environment.*
@@ -95,7 +95,7 @@ Use the **Attacker Menu** window to launch attacks (e.g., DoS Hulk, GoldenEye) a
 
 ---
 
-## 📊 Dataset & Data Processing
+## Dataset & Data Processing
 
 The model trains on the **CIC-IDS2018** dataset. 
 
@@ -113,7 +113,7 @@ The model trains on the **CIC-IDS2018** dataset.
 
 ---
 
-## 🧠 Model Training & Evaluation
+## Model Training & Evaluation
 
 ### Training
 ```bash
@@ -131,7 +131,7 @@ PYTHONPATH=. python evaluation/evaluate.py
 
 ---
 
-## 📈 Model Performance Results
+## Model Performance Results
 
 The following metrics were verified against the v6 Temporal Transformer test split evaluation.
 
@@ -155,7 +155,7 @@ The model successfully identifies attack probability surges an average of **5.00
 
 ---
 
-## 🔍 Live Inference & Custom PCAP Analysis
+## Live Inference & Custom PCAP Analysis
 
 ![Dashboard Prediction](media/dashboard-with-prediction.png)
 *Dashboard dynamically displaying class probabilities across forecast horizons.*
@@ -182,7 +182,7 @@ To inject custom `.pcap` files into the Docker AI environment for analysis:
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 TNTF-CLI/
@@ -204,7 +204,7 @@ TNTF-CLI/
 
 ---
 
-## 🛠 Troubleshooting
+## Troubleshooting
 
 - **No Traffic in Dashboard**: If running locally, ensure you executed the script with `sudo` or Administrator privileges. In Docker, ensure the `forecast` container successfully attached to the `testing-app` namespace.
 - **Docker Compose Port Conflicts**: If port `8080` is in use, modify the binding in `docker/docker-compose.yml` (`"8080:8080"`).
