@@ -51,7 +51,7 @@ The v6 architecture converts raw traffic flows into continuous **1-second states
 **Linux / macOS**
 ```bash
 git clone https://github.com/pramod-shinde-05/TNTF-CLI.git
-cd SIH2026
+cd TNTF-CLI
 python3 -m venv venv
 source venv/bin/activate
 pip install -r project/requirements.txt
@@ -60,7 +60,7 @@ pip install -r project/requirements.txt
 **Windows**
 ```cmd
 git clone https://github.com/pramod-shinde-05/TNTF-CLI.git
-cd SIH2026
+cd TNTF-CLI
 python -m venv venv
 .\venv\Scripts\activate
 pip install -r project\requirements.txt
